@@ -23,6 +23,14 @@
             android:name=".activities.TravelsListActivity"
             android:label="@string/title_activity_travels_summary" />
         <activity android:name=".FormAddActivity"></activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCou5mmhujhKFKccpXMXU4JFdtwNv-2Bp0"
+            />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="10.2.4"
+        />
     </application>
 
 </manifest>
