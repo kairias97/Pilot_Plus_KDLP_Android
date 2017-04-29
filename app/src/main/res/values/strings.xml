@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Pilot Plus KDLP</string>
+    <string name="title_activity_travels_summary">TravelsSummary</string>
 </resources>
