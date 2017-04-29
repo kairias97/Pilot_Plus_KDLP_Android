@@ -11,7 +11,7 @@ import retrofit2.http.GET;
  */
 
 public interface PilotPlusService {
-    @GET("/countries/airports")
+    @GET("countries/airports")
     Call<CountriesResponse> getAllInfo();
     public class CountriesResponse{
         RealmList<Country> countries;
