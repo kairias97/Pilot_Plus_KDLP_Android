@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +21,8 @@
         </activity>
         <activity
             android:name=".activities.TravelsListActivity"
-            android:label="@string/title_activity_travels_summary"></activity>
+            android:label="@string/title_activity_travels_summary" />
+        <activity android:name=".FormAddActivity"></activity>
     </application>
 
 </manifest>
