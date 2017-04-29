@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Pilot Plus KDLP</string>
-    <string name="title_activity_travels_summary">TravelsSummary</string>
+    <string name="title_activity_travels_summary">Travels History</string>
+    <string name="country_origin">Select country of departure</string>
+    <string name="country_destination">Select country of arrival</string>
+    <string name="airport_departure">Select departure airport</string>
+    <string name="airport_arrival">Select arrival airport</string>
 </resources>
