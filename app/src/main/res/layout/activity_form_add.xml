@@ -74,7 +74,8 @@
             android:layout_height="wrap_content"
             android:text="Submit"
             android:background="@color/colorAccent"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF"
+            />
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
             android:name="com.google.android.gms.maps.MapFragment"
             android:id="@+id/travel_map"

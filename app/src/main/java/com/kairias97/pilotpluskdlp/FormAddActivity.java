@@ -74,6 +74,7 @@ public class FormAddActivity extends AppCompatActivity implements OnMapReadyCall
             realm.commitTransaction();
             setMapPoints(originA, destinationA);
             disableInputs();
+            this.setTitle(myTrip.getTrip_name());
             Toast.makeText(this, "Trip registered successfully", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show();
@@ -111,6 +112,7 @@ public class FormAddActivity extends AppCompatActivity implements OnMapReadyCall
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_add);
+        this.setTitle("Add new trip");
         ButterKnife.bind(this);
         realm = Realm.getDefaultInstance();
         originCountries = realm.where(Country.class).notEqualTo("code", "-2").findAllSorted("name");
