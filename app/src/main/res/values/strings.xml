@@ -5,4 +5,5 @@
     <string name="country_destination">Select country of arrival</string>
     <string name="airport_departure">Select departure airport</string>
     <string name="airport_arrival">Select arrival airport</string>
+    <string name="maps_api_key">AIzaSyCou5mmhujhKFKccpXMXU4JFdtwNv-2Bp0</string>
 </resources>
