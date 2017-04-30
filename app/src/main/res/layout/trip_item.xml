@@ -6,18 +6,30 @@
     <TextView
         android:id="@+id/trip_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="TRIP NAME"
+        android:textStyle="bold"
+        android:textColor="@color/colorAccent"/>
+
     <TextView
         android:id="@+id/origin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Departure - " />
+
     <TextView
         android:id="@+id/arrival"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Arrival - " />
+
     <TextView
         android:id="@+id/createdAt"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text="2017/04/30"
+        android:textStyle="italic" />
 
 </LinearLayout>
