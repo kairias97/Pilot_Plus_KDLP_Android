@@ -10,6 +10,7 @@ import android.view.Menu;
 import com.kairias97.pilotpluskdlp.activities.TravelsListActivity;
 import com.kairias97.pilotpluskdlp.interfaces.PilotPlusService;
 import com.kairias97.pilotpluskdlp.interfaces.PilotPlusService.CountriesResponse;
+import com.kairias97.pilotpluskdlp.models.Airport;
 import com.kairias97.pilotpluskdlp.models.Country;
 
 import io.realm.Realm;
@@ -33,9 +34,10 @@ public class SplashActivity extends Activity {
         setContentView(R.layout.activity_splash);
         realm = Realm.getDefaultInstance();
         countryList = realm.where(Country.class).findAll();
-        if(countryList.size() > 0){
+        if(countryList.size() > 2){
             moveToTravelList(SPLASH_DISPLAY_LENGTH);
         } else {
+            addPlaceholders(realm);
             Retrofit retrofit = new Retrofit.Builder()
                     .baseUrl("https://pilot-plus-uam.herokuapp.com/api/v1/")
                     .addConverterFactory(GsonConverterFactory.create())
@@ -62,6 +64,22 @@ public class SplashActivity extends Activity {
         }
 
     }
+
+    private void addPlaceholders(Realm realm) {
+        realm.beginTransaction();
+        Airport originAirport = new Airport(-1, "", getResources().getString(R.string.airport_departure), "",0,0);
+        Airport departureAirport = new Airport(-2, "", getResources().getString(R.string.airport_arrival), "",0,0);
+        realm.copyToRealmOrUpdate(originAirport);
+        realm.copyToRealmOrUpdate(departureAirport);
+        Country originCountry = new Country("-1", getResources().getString(R.string.country_origin), new RealmList<Airport>());
+        originCountry.getAirports().add(0, originAirport);
+        realm.copyToRealmOrUpdate(originCountry);
+        Country destinationCountry = new Country("-2", getResources().getString(R.string.country_destination), new RealmList<Airport>());
+        destinationCountry.getAirports().add(0, departureAirport);
+        realm.copyToRealmOrUpdate(destinationCountry);
+        realm.commitTransaction();
+    }
+
     private void moveToTravelList(int length){
         /* New Handler to start the Menu-Activity
          * and close this Splash-Screen after some seconds.*/
