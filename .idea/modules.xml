@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PilotPlusKDLP.iml" filepath="$PROJECT_DIR$/PilotPlusKDLP.iml" />
       <module fileurl="file://$PROJECT_DIR$/Pilot_Plus_KDLP.iml" filepath="$PROJECT_DIR$/Pilot_Plus_KDLP.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Pilot_Plus_KDLP_Android.iml" filepath="$PROJECT_DIR$/Pilot_Plus_KDLP_Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
